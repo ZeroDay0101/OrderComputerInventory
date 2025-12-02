@@ -1,0 +1,107 @@
+/* me.css - Dark Mode */
+/* Fullscreen dark background */
+.item-form-parent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* better for forms with different heights */
+    flex-wrap: wrap; /* wrap forms on small screens */
+    min-height: 100vh; /* full viewport height */
+    width: 100vw; /* full viewport width */
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #444444; /* dark background */
+    color: #e0e0e0;
+    gap: 40px; /* reduce huge 200px gap */
+    box-sizing: border-box;
+}
+
+/* Form container */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e; /* dark card background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.forms-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* stack on small screens */
+    gap: 40px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column; /* stack label + input vertically */
+    margin-bottom: 12px;
+}
+
+/* Form heading */
+.form-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Form labels */
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #cccccc;
+}
+
+/* Input fields and select */
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Input focus */
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+}
+
+/* Error messages */
+.form-container p.error {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin: -6px 0 10px 0;
+}
+
+/* Submit button */
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Hover effect for button */
+.form-container button[type="submit"]:hover {
+    background-color: #357ab8;
+}

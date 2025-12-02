@@ -1,0 +1,61 @@
+.slide-panel {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.slide-panel.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.panel-content {
+    width: 50vw;
+    height: 50vh;
+    background: #45673b;
+    border-radius: 12px;
+    padding: 24px;
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* Slide up animation */
+    transform: translateY(200%);
+    transition: transform 0.45s ease;
+}
+
+.slide-panel.open .panel-content {
+    transform: translateY(0);
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    background: #333;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    position: relative;
+}
+
+.p {
+    color: #000000;
+}

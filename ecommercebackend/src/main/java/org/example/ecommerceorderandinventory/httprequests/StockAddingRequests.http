@@ -1,0 +1,287 @@
+#Exmaple requests to add items
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "MOUSE",
+  "model": "HyperClick X1",
+  "price": 35,
+  "quantity": 25
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "MOUSE",
+  "model": "SpeedPro G200",
+  "price": 50,
+  "quantity": 15
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "MOUSE",
+  "model": "SilentGrip S100",
+  "price": 40,
+  "quantity": 20
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "KEYBOARD",
+  "model": "MechaKey MK-1",
+  "price": 70,
+  "quantity": 10
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "KEYBOARD",
+  "model": "UltraType U200",
+  "price": 55,
+  "quantity": 15
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "KEYBOARD",
+  "model": "SilentPress SP50",
+  "price": 45,
+  "quantity": 20
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "MONITOR",
+  "model": "VisionPro 24\"",
+  "price": 180,
+  "quantity": 10
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "MONITOR",
+  "model": "UltraView 27\"",
+  "price": 250,
+  "quantity": 7
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "MONITOR",
+  "model": "GamerMax 32\"",
+  "price": 400,
+  "quantity": 5
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "GPU",
+  "model": "GTX Titan X1",
+  "price": 600,
+  "quantity": 5
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "GPU",
+  "model": "RTX Lightning 3080",
+  "price": 800,
+  "quantity": 3
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "GPU",
+  "model": "RX Power 6800",
+  "price": 700,
+  "quantity": 4
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "PSU",
+  "model": "VoltMax 650W",
+  "price": 80,
+  "quantity": 12
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "PSU",
+  "model": "EnergyPro 750W",
+  "price": 100,
+  "quantity": 8
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "PSU",
+  "model": "TitanPower 850W",
+  "price": 120,
+  "quantity": 6
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "PROCESSOR",
+  "model": "Intel i5-12400",
+  "price": 180,
+  "quantity": 10
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "PROCESSOR",
+  "model": "AMD Ryzen 5 5600X",
+  "price": 220,
+  "quantity": 8
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "PROCESSOR",
+  "model": "Intel i7-12700K",
+  "price": 350,
+  "quantity": 5
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "RAM",
+  "model": "HyperRAM 16GB 3200MHz",
+  "price": 70,
+  "quantity": 20
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "RAM",
+  "model": "UltraRAM 32GB 3600MHz",
+  "price": 120,
+  "quantity": 15
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "RAM",
+  "model": "SpeedRAM 16GB 3600MHz",
+  "price": 80,
+  "quantity": 25
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "COOLER",
+  "model": "ArcticBreeze 120",
+  "price": 40,
+  "quantity": 15
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "COOLER",
+  "model": "HyperCool H100",
+  "price": 90,
+  "quantity": 8
+}
+
+###
+POST localhost:8080/api/inventory
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "itemType": "COOLER",
+  "model": "SilentFan S50",
+  "price": 50,
+  "quantity": 12
+}

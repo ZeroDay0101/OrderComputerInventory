@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: E-CommercePostgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: E-CommerceDB
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER}" ]
+      interval: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: E-CommerceRabbitMQ
+    ports:
+      - "5672:5672"    # AMQP port for Spring Boot
+      - "15672:15672"  # Web dashboard
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+        - rabbitmq_data:/var/lib/rabbitmq
+
+  springboot-app:
+    image: ecommerce-springboot-app
+    build: ./ecommercebackend
+
+    ports:
+      - "8080:8080"   # Spring Boot HTTP
+      - "5005:5005"   # JDWP debug port
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/E-CommerceDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234
+
+      # ✨ RabbitMQ connection for Spring Boot
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+
+    depends_on:
+      - postgres
+      - rabbitmq
+  react:
+    image: reactfrontend
+    build: ./ecommercefrontend
+    ports:
+      - "5173:80"
+    container_name: react-container
+
+volumes:
+  postgres_data:
+  rabbitmq_data:
