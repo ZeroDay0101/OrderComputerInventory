@@ -29,6 +29,6 @@
     "noUncheckedSideEffectImports": true
   },
   "include": [
-    "../../Desktop/ecommercefrontend/src"
+    "src"
   ]
 }
